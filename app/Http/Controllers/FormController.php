@@ -18,6 +18,7 @@ class FormController extends Controller
                 'file' => 'required|mimes:png,jpg',
             ]
         );
+        
         Form::create($request->only( 'name', 'system_name', 'description', 'priority', 'file'));
 
         return response()->json(['message' => 'Incidente enviado.'], 201);
